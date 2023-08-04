@@ -1,0 +1,20 @@
+name: Auto-merge pull request
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+    steps:
+      - name: Merge pull request
+        uses: pascalgn/automerge-action@v0.10.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          merge-method: squash
+          delete-branch: true
+          commit-message: 'Merged by ${{ github.actor }}'
+          commit-author: '${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>'
+          commit-body: 'This pull request was automatically merged by [automerge-action](

@@ -1,0 +1,14 @@
+# Images assets
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    *This folder hosts the **`images assets`**, which are the non ui-related graphical elements to be
+    embedded in the project and that need neither a specific plugin to be diplayed nor further
+    processing at build time. Typical examples include  `pictures`, `diagrams`, `charts`, `maps` and,of
+    course, images of any type, including animated [`GIFs`](https://en.wikipedia.org/wiki/GIF). It is
+    worth mentioning that [`PDFs`](https://en.wikipedia.org/wiki/PDF) that are not strictly reserved to
+    be downloaded.*
+
+</div></div>

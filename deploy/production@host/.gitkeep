@@ -1,0 +1,41 @@
+<!-- CAUTION This file is shared among all specific deployment environment [hardlink] -->
+# Target Specific Deployment Environment
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    <i><i>This folder is a  <code>Dedicated Deployement Environment</code></b>. It extends the
+    common utilities to be found at the <i>Deployement Environment</i>' root with all the specifics
+    of the Deployment Target at hand..</i>
+
+ </div></div>
+
+## Overview
+
+This folder provides a *Target Specif Deployement Environment* that is dedicated to a given *type*
+of deployment at a given *location*. Its purpose is to extend the common stored at the root of the
+`deploy` folder with all the specifics of the deployment target at hand. As such, and to the exception
+of the *target folders* that it obviously won't contain, its internal structure is the same as that of the
+`deploy` folder's root. In particular, it contains its own `.sources` folder which purpose is to hold a,
+possibly customized, copy of the `deploy` folder's `.sources` folder.
+
+In order to simplify the deployment procedure, this folder may also contain a *junction*[^1] named
+`targ-env$`[^2] pointing to the folder in the targetted deployment environment that the project must be
+deployed to. As a good practice, this folder's structure should be preserved even in the case when
+the common utilities of `deploy`'s root need not be extended. The motivation for doing so is to keep a
+certain symetry between the different *deployment targets* and to make it easier to add a new
+*target folder* in the future.
+
+As a final note, let mention the [ln.exe](http://schinagl.priv.at/nt/ln/ln.html) *PowerShell* extension
+which very efficiently handle *hard* and *soft* links on Windows. The `ln` command it provides
+happens to be much more versatile than the nativee `mklink` command since, besides its ability to
+create all sorts of links, it also allows to copy and move folders without breaking the links they
+contain. Furthermore, its power can be brought to the context menu of the Windows Explorer by
+installing the [Link Shell Extension](https://tinyurl.com/5n7md3yc) .
+
+[^1]: *Junctions* are the Windows equivalent of *symbolic links* on Unix-like systems - i.e. links to
+folders *or mount points* that are transparent to the user and the applications -, except that they
+cannot reference files and that they can be created onlx on NTFS partitions.
+
+[^2]: The `$` suffix to indicate that the folder is a *junction* was used instead of the usual  `.lnk` extension to avoid our link-mimics to be ignored by Git when using a standard `.gitignore` file. The `$` suffix should be changed for an `.lnk` extension for real-world use where these folders are, indeed, *junctions*.

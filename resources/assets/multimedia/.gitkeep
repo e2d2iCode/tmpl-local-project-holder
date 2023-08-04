@@ -1,0 +1,22 @@
+# Multimedia assets
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    *This folder hosts the **`multimedia`** assets, which can be assets per se or any other file that
+    can be used to generate such assets. Multimedia assets consist of the multimedia files that are
+    neither `images` nor elements related to the `user-interface`. Such files typically consist of
+    non-static contents meant to be embedded in the project and played using a reader that depends
+    on the specific type of format of the multimedia file at hand. This folder partitions its contentes into
+    two subfolder named `audio` and `videos`.Standard audio formats include
+    [`.mp4`](https://en.wikipedia.org/wiki/MPEG-4_Part_14)
+    [`.flv`](https://en.wikipedia.org/wiki/Flash_Video),
+    [`.mkv`](https://en.wikipedia.org/wiki/Matroska), and
+    [`.mov`](https://en.wikipedia.org/wiki/QuickTime_File_Format).
+    On the other hand, typical audio formats include
+    [`.wav`](https://en.wikipedia.org/wiki/WAV),
+    [`.mp3`](https://en.wikipedia.org/wiki/MP3), and
+    [`.flac`](https://en.wikipedia.org/wiki/FLAC).*
+</div>
+</div>

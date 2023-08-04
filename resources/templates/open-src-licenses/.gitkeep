@@ -1,0 +1,14 @@
+# LICENSE Templates
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    <i>This folder contains templates of open source <b><code>LICENSES</code></b> in both
+    plain text and markdown formats. The needed replacements are indicated by placeholders
+    as all-capitals words surrounded by a pair of double `@` symbols, like`@@PLACEHOLDER@@`.
+    For detailed information about open source licenses including how to choose one, or for additional
+    templates, please refer to the <a href="https://choosealicense.com/">Choose a License</a>
+    website.</i>
+</div>
+</div>

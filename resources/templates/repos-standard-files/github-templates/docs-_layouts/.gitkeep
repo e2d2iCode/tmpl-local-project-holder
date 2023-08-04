@@ -1,0 +1,39 @@
+# GitHub Pages' Site Templates
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    <i>This folder holds a template that can be used to generate a
+    <b><code>GitHub Pages' Website</code></b> containing the information found in the
+    repository's <b><code>README.md</code></b> file.
+</i>
+
+</div>
+</div>
+
+## Overview
+
+*GitHub* can generate a *GitHub Pages* site from the content of the `docs/_layouts` folder it
+finds at the root of the repository. The `docs-_layouts` folder of the present directory holds a basic
+template that displays the content of the [`README.md`](/README.md) file in a website-like format. The resulting site can be accessed at the following URL:
+
+```url
+https://<username>.github.io/<repository-name>
+```
+
+where `<username>` is the name of the user or organization that owns the repository and
+`<repository-name>` is the name of the repository.
+
+The generated site is further customized in the [`_config.yml`](_config.yml), which
+specifies the site's title, description, base URL, etc.... More interestingly, it can specify the theme to
+be used by the the site. For instance, the present configuration file uses
+[Jekylll's midnight](https://github.com/pages-themes/midnight/tree/master/_includes)
+theme, but there are many others to choose from in the
+[GitHub Page's theme gallery](https://pages.github.com/themes/).
+
+**!!! Note that *GitHub* expects to find the configuration at the root of the repository !!!**
+
+For detailed information about the
+configuration file and Jeckyll, see the
+[GitHub Pages documentation](https://docs.github.com/en/pages/) and/or the [Jekyll weebsite](https://jekyllrb.com/).

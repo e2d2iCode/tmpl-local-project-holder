@@ -1,0 +1,14 @@
+# Working Environment
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    *This folder hosts the project's **`working environment`**. Depending on the project's nature,it
+    may hosts either a set of source files, a repository and/or a collection of subfolders containing
+    subprojects. Note that in the case where this folder contains a single project, then it should be
+    renamed in its singular form, which is `workspace` instead of `workpaces`*
+
+ </div></div>
+
+<!-- ROADMAP Implement specific templates  for various types of subprojects and embed them here as GitHub Submodules [subproject] -->

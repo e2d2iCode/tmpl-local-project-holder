@@ -1,0 +1,50 @@
+# Assets Folder
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    *This folder contains the `assets` of the project at hand, which are ready-to-use files to be
+    embedded in the project's deliverables at build time. They are typically binary files, such as
+    images, audio, or video files, but they can also be text files, such as configuration files, or even
+    executable files, such as scripts or libraries, as long as the building process includes them as they
+    are.*
+
+</div>
+</div>
+
+## The Assets Folder's Structure
+
+The assets folder is organized in subfolders that group assets by their nature. The tree
+below shows the assets folder's structure and briefly describes each subfolder's content.
+For more details on each type of asset, please refer to the `.gitkeep` file of the
+corresponding subfolder.
+
+<!-- EDIT The following tree may need an update [assets] -->
+The tree below shows the assets folder's structure and briefly describes the type of assets that each
+subfolder contains.
+
+```tree
+  .                        ASSETS FOLDER
+  |                        ´´´´´´´´´´´´´´
+  ├── css                   # Styling assets and fonts
+  ├── exec                  # Executable codes like scripts
+  ├── images                # Non-UI graphical assets like images
+  ├── libraries             # Reusable codes like packages and librairies
+  ├── multimedia            # Multimedia assets that are neither img nor UI
+  |   ├── audio               # Audio and sound-like assets
+  |   └── videos              # Video and animation-like assets
+  ├── to-download           # Files that are provided as downloadable content
+  └── user-interface        # UI-related assets like icons, logos and wallpapers
+```
+
+## What's an Asset?
+
+Generally speaking, an asset is any file that is not a source code file but is part of the project. Assets
+are typically binary files, such as images, audio, or video files. Still, they can also be text files, such
+as configuration files, or even executable files, such as scripts or libraries, as long as the building
+process includes them as they are.
+
+In the context of the present folder, however, the term `asset` needs to be interpreted in a broader
+way. Here, we let the term `asset` refer to any file that may play the role of an asset in the project's
+development or that may serve to generate one.

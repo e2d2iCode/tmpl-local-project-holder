@@ -1,0 +1,37 @@
+# Project's Archives
+
+<div style="width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    <i>This folder hosts the project's <b><code>project's archive</code></b>, which essentially
+     consists of backups of the project's releases. Note that this folder's content is subject to the
+     archives' naming scheme described in
+       <a href="../../admin/guidelines/handling-archives/handling-archives.md">
+            "Handling Archive"
+        </a></i>.
+</div></div>
+
+## Overview
+
+This folder hosts the project's *archives*, which essentially consist of backups of the project's
+releases. Note that this folder also contains the archives of every subproject that the project may
+contain. As a good practice, the contents of all archives folders should be mergeable with each
+other. To archieve this,files must be named according to a predefined ruleset avoiding any risk of
+collision. Such a scheme should also induce natural sorting and grouping of the archives in a way
+that makes it easy to find a specific archive.
+
+<div style="width: 45em; font-size: normal;margin: 0 10% 5ex 5%;"
+>
+
+!!!Hint Naming Scheme
+    <code><span style="font-size: 110%; font-weight: bold">
+    &lt; prefix &gt; \~ &lt; descriptive-name &gt; [ \~ &lt; suffixes &gt; ] \~ &lt; vers|date|tag &gt; . zip
+    </span></code>
+
+</div>
+
+A detailed description of each of the components of the naming scheme, including the list of values
+that can be used for each of them depending on the context, is available in the
+[handling archives](../../admin/guidelines/handling-archives/handling-archives.md) section of the
+project's guidelines located in the `admin` folder.

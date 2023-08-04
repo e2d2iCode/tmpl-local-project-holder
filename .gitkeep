@@ -1,0 +1,160 @@
+# Project's Root Folder
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    *This template provides a folder hierarchy for holding one or more projects sharing common resources.  Its versatile structure is suitable for all sorts of projects, regardless of their size, complexity, or nature.*
+
+</div></div>
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
+<details open style="margin: 14pt 0pt 24pt 10pt">
+<summary style="margin-left: -8pt; font-weight: bold; font-size: larger; font-variant: small-caps">
+<span style="margin-left: 3pt">Table of contents<span></summary>
+
+<!-- code_chunk_output -->
+
+- [Overview](#overview)
+- [The *.bak* folder](#the-bak-folder)
+- [The *admin* folder](#the-admin-folder)
+- [The *deploy* folder](#the-deploy-folder)
+- [The *resources* folder](#the-resources-folder)
+- [The *workspaces* folder](#the-workspaces-folder)
+- [The Full Folder Hierarchy](#the-full-folder-hierarchy)
+
+<!-- /code_chunk_output -->
+
+</details>
+
+## Overview
+
+This template provides a folder hierarchy for holding one or more projects sharing common
+resources.  Its versatile structure is suitable for all sorts of projects, regardless of their size,
+complexity, or nature. It is not meant to be used as a repository template, but rather as a template
+for a local folder structure that will itself contain one or more repositories. Note that it is not to be
+confused with a mono-repo either since its root folders are not meant to be versioned. The
+contents of the `workspace(s)` folder, however, *may* be versioned by itself or contain multiple
+subfolders, each of which being a mono-repo, a multi-repo or a simple folder.
+
+The root folder splits the project into six main folders that cover the project's needs from conception
+to production. Its tree structure is as follows:
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+
+``` tree
+   .                        ROOT FOLDER (Project's name)
+   |                        ´´´´´´´´´´´´´´´´´´´´´´´´´´´´
+   ├─ .bak                  # The project's backups and archives
+   ├─ admin                 # The administrative environment
+   ├─ deploy                # The deployment environment
+   ├─ resources             # The needed resources
+   └─ workspaces            # Dev environment
+```
+
+</div>
+
+## The *.bak* folder
+
+This folder hosts the project's archives and backups, which include the *continous backups*
+performed by a tool like *VSCode's Local History* extension, an archive containing copies of every
+release or deployment of the project, and any other, temporary or permanent, backup made by the
+user. For ease and efficiency of maintenance, the latter are stored directly at the folder's root-level.
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Tip Subprojects' archives
+    For projects that contain subprojects, it is more practical to let each of them have its own
+    *backup folder* and, thus, its own `archives` folder as well. According to the above convention,
+    the content of the latter should then be copied here. A better alternative is to define the
+    subproject's `archives` folder as a symbolic link to this folder.
+
+</div>
+</div>
+
+*More info [here][bak-gitkeep].*
+
+## The *admin* folder
+
+The `admin` directory hosts the administrative environment. It contains information about the project
+and its development, which includes the guidelines to be followed by the contibutors, the user's todo
+lists, the reporting tools and their results' history and any information concerning the contributors or
+the development's agenda.<br/>
+*More info [here][admin-gitkeep].*
+
+## The *deploy* folder
+
+The `deploy` directory is the environment where deployments happen. Its content ranges from links
+to remote locations where to copy files and folders to workflows and scripts that automatically
+pack and deploy the code.<br/>
+*More info [here][deploy-gitkeep].*
+
+## The *resources* folder
+
+The `resources` folder contains all the resources developers need to work on the project. Besides
+"official" data, such as *development guidelines* that all contributors share, this folder may include
+*personal* data, like *notes*, *to-do lists*, or potentially valuable assets.<br/>
+*More info [here][resources-gitkeep].*
+
+## The *workspaces* folder
+
+The `workspaces` folder is the environment where development happens. It contains all the material
+needed to develop, test, and build the project. Depending on the project's nature, it may consist
+of one or more sub-folders, each containing a different workspace that may or may not be related to
+the others besides being part of the same project's folder hierarchy.<br/>
+*More info [here][workspaces-gitkeep].*
+
+## The Full Folder Hierarchy
+
+The deeper into the folder hierarchy, the more project-specific the structure becomes. The overall tree, however, shouldn't be subject to major changes from one project to another. The folders to be found on its first two levels, in particular, should be generic enough to be used as is for any project. Changes, if any, should be limited to the third level and below, or consist of the deletion of folders that  are not needeed for the project at hand.
+
+The *folder hierarchy*, thus omitting the files and, in particular, the `.gitkkep` ones that *every* non-documentation folder contains, is as follows:
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+
+``` tree
+
+
+   .                                 ROOT FOLDER (Project's name)
+   |                                 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´
+   ├─ .bak                            # The project's backups and archives
+   |  ├── .history                      # Local-history extension folder
+   |  └── archives                      # The project's main archives
+   |
+   ├─ @rel                            # Stores and exposes the main releases
+   |  └── archives                      # Archives the project's main releases
+   |
+   ├─ admin                           # The administrative environment
+   |  ├── audits                        # Autits scripts and reports
+   |  ├── guidelines                    # Development best practices and conventions
+   |  └── todo&notes                    # User's personal nores and todo lists
+   |
+   ├─ deploy                          # The deployment environment
+   |  ├── .cmds                         # Common commands and scripts
+   |  ├── .config                       # Common configuration parameterrs
+   |  ├── .source                       # The sourcefiles to be deployed (typically a release)
+   |  ├── archives                      # An archive containing a copy of every deployed version
+   |  ├── new-release@rel               # An env. for deploying a new release to the @rel targer
+   |  └── production@host               # Mimics an env. for deploying to a remote production host
+   |
+   ├─ resources                       # The user's personal development's resources
+   |  ├── assets                        # A library of assets or assets' generators
+   |  ├── manuals                       # Stores useful info including mans, tutos and refs
+   |  ├── templates                     # Hosts templates, models, snippets, etc...
+   |  ├── useful-tools                  # The user's personal tools, utilities and scripts
+   |  └── worth-keeping                 # Set aside code fragments, staged devs, worhy ideas, etc...
+   |
+   └─ workspace(s)                    # The user's personal development's resources
+      ├── a-subprojetc                  # A library of assets or assets' generators
+      └── another-subproject            # A library of assets or assets' generators
+
+```
+
+</div>
+
+[bak-gitkeep]: ./.bak/.gitkeep
+[admin-gitkeep]: ./admin/.gitkeep
+[deploy-gitkeep]: ./deploy/.gitkeep
+[resources-gitkeep]: ./resources/.gitkeep
+[workspaces-gitkeep]: ./workspace(s)/.gitkeep

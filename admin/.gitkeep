@@ -1,0 +1,46 @@
+# Administrative Environment
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    *This folder hosts **`administrative`** information about the held projects.
+    In the case when the projects consists of multiple subprojects, the internal structures of Its
+    subfolders are likely to be partionned in a way that reflects the relationships between those
+    subprojects.*
+
+</div>
+</div>
+
+## Overview
+
+This folder hosts the administrative information about the held projects. While its core organization
+shouldn't be modified from one project to another, the internal structure of its subfolders is likely to
+be adapted to the specificities of the project at hand. In particular, in the case when the project
+consists of multiple subprojects, subfolders like `audits` and `todo&notes` should be partionned
+according to the relationships between those subprojects and their natural grouping by topic ot type.
+
+This folder's base tree structure is as follows:
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+
+```tree
+
+
+  .                                     ADMIN FOLDER
+  |                                     ´´´´´´´´´´´´
+  ├── audits                            # Autits scripts and reports
+  ├── guidelines                          # Development best practices and conventions
+  |   ├── git-branching                   # Git branching guidelines' root folder
+  |   |   ├── assets                        # Assets: the model's illustration as PNG and PDF
+  |   |   └── git-branching-model.md        # The guidelines' markdown source file
+  |   |
+  |   └── handling-archives               # Guidelines on how to handle archives
+  |       ├── assets                        # The assets of the archives' handling guidelines
+  |       └── handling-archives.md          # The guidelines' markdown source file
+  |
+  └── todo&notes                          # User's personal nores and todo lists
+
+```
+
+</div>

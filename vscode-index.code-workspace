@@ -1,0 +1,385 @@
+{
+  "extensions": {
+    "recommendations": [
+      "zainchen.json",
+      "znck.grammarly",
+      "pkief.material-icon-theme",
+      "gruntfuggly.todo-tree",
+      "xyz.local-history",
+      "mohsen1.prettify-json",
+      "eamodio.gitlens",
+      "davidanson.vscode-markdownlint",
+      "naumovs.color-highlight",
+      "anseki.vscode-color",
+      "zhuangtongfa.material-theme",
+      "ms-vscode.powershell",
+      "github.copilot",
+      "vivaxy.vscode-conventional-commits",
+      "shd101wyy.markdown-preview-enhanced"
+    ]
+  },
+  "folders": [
+    {
+      "name": "ROOT",
+      "path": "."
+    },
+    {
+      "name": "ADMIN",
+      "path": "./admin"
+    },
+    {
+      "name": "DEPLOY",
+      "path": "./deploy"
+    },
+    {
+      "name": "RESOURCES",
+      "path": "./resources"
+    },
+    {
+      "name": "_____ WORKSPACE(S) _____",
+      "path": "./workspace(s)"
+    },
+    {
+      "name": "A SUBPROJECT",
+      "path": "./workspace(s)/a-subproject"
+    },
+    {
+      "name": "ANOTHER SUBPROJECT",
+      "path": "./workspace(s)/another-subproject"
+    }
+  ],
+  "settings": {
+    "[jsonc]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[markdown]": {
+      "editor.wordWrap": "bounded",
+    },
+    "conventionalCommits.editor.keepAfterSave": false,
+    "conventionalCommits.scopes": [
+      "fs",
+      "dpl",
+      "rss",
+      "dev",
+      "wss",
+      "glob",
+      "tmpl",
+      "adm",
+      "repo",
+      "@rel",
+      "vscode",
+    ],
+    "files.associations": {
+      "*.gitkeep": "markdown"
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "files.watcherExclude": {
+      "**!": true,
+      "**.archives**": true,
+      "**.bak**": true,
+      "**.history**": true,
+      "**.zip": true,
+      "**/archive/**": true,
+      "**/archives/**": true,
+    },
+    "git.enableCommitSigning": true,
+    "local-history.absolute": false,
+    "local-history.dateLocale": "en-CH",
+    "local-history.daysLimit": 30,
+    "local-history.enabled": 2,
+    "local-history.exclude": [
+      "**/.history",
+      "**.lnk",
+      "**.zip",
+    ],
+    "local-history.path": "${workspaceFolder: 0}/.bak/",
+    "markdown-preview-enhanced.HTML5EmbedIsAllowedHttp": true,
+    "markdown-preview-enhanced.HTML5EmbedUseLinkSyntax": true,
+    "markdown-preview-enhanced.breakOnSingleNewLine": false,
+    "markdown-preview-enhanced.enableExtendedTableSyntax": true,
+    "markdown-preview-enhanced.enableHTML5Embed": true,
+    "markdown-preview-enhanced.enableScriptExecution": true,
+    "markdown-preview-enhanced.imageFolderPath": "./assets/images/",
+    "markdownlint.config": {
+      "MD033": false,
+      "MD039": false,
+    },
+    "markdownlint.lintWorkspaceGlobs": [
+      "**.md",
+      "**.gitkeep",
+      "!**/.bak/**",
+      "!**/.git",
+      "!**/.history",
+      "!**LICENSE*",
+      "!**xternal-vendor-**",
+    ],
+    "todo-tree.filtering.excludeGlobs": [
+      "**.zip",
+      "**.bak/**",
+      "**/.git/**",
+      "**/.history/**",
+      "**/@rel/**",
+      "**/archive/**",
+      "**/archives/**",
+      "**/templates/**",
+      "**xternal-vendor-**",
+    ],
+    "todo-tree.filtering.ignoreGitSubmodules": false,
+    "todo-tree.filtering.includeHiddenFiles": true,
+    "todo-tree.filtering.passGlobsToRipgrep": true,
+    "todo-tree.general.automaticGitRefreshInterval": 300,
+    "todo-tree.general.debug": false,
+    "todo-tree.general.exportPath": "${workspaceFolder}/admin/todo&notes/todo-tree-%Y%m%d-%H%M.txt",
+    "todo-tree.general.periodicRefreshInterval": 5,
+    "todo-tree.general.showActivityBarBadge": true,
+    "todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,
+    "todo-tree.general.statusBar": "tags",
+    "todo-tree.general.tags": [
+      "BUG",
+      "FIXME",
+      "FINISH",
+      "CHECK",
+      "REVIEW",
+      "TEMP",
+      "IDEA",
+      "IMPROVE",
+      "LEARN",
+      "ROADMAP",
+      "NOTE",
+      "CAUTION",
+      "LINK",
+      "@@",
+      "EDIT",
+      "OPTION",
+      "TEST",
+      "TODO",
+      "PART",
+      "CHAPTER",
+      "SECTION",
+      "SUBSECTION",
+      "BLOCK",
+      "ITEM"
+    ],
+    "todo-tree.highlights.backgroundColourScheme": [
+      "Red",
+      "OrangeRed",
+      "Tomato",
+      "Orange",
+      "Yellow",
+      "GoldenRod",
+      "none",
+      "Blue",
+      "none",
+      "none",
+      "none",
+      "LightSkyBlue",
+      "none",
+      "none",
+      "Purple",
+      "none",
+      "Blue",
+      "Blue",
+      "DarkSlateGrey",
+      "Olive",
+      "DarkOliveGreen",
+      "DarkGreen",
+      "none",
+      "none"
+    ],
+    "todo-tree.highlights.customHighlight": {
+      "@@": {
+        "icon": "typography",
+        "iconColour": "#ff1493",
+        "opacity": 0,
+        "type": "tag",
+        "type_": "capture-groups:2,3"
+      },
+      "BLOCK": {
+        "icon": "three-bars",
+        "iconColour": "#90ee90",
+        "opacity": 0,
+        "type": "text-and-comment"
+      },
+      "BUG": {
+        "icon": "bug",
+        "iconColour": "#ff0000",
+        "opacity": 1,
+        "type": "whole-line"
+      },
+      "CAUTION": {
+        "icon": "alert",
+        "iconColour": "#87CEFA",
+        "opacity": 0,
+        "type": "line"
+      },
+      "CHAPTER": {
+        "icon": "book",
+        "iconColour": "#808000",
+        "opacity": 1,
+        "type": "line"
+      },
+      "CHECK": {
+        "icon": "checklist",
+        "iconColour": "#ffa500",
+        "opacity": 1,
+        "type": "text-and-comment"
+      },
+      "EDIT": {
+        "icon": "pencil",
+        "iconColour": "#800080",
+        "opacity": 1,
+        "type": "whole-line"
+      },
+      "FINISH": {
+        "icon": "kebab-horizontal",
+        "iconColour": "#FF6347",
+        "opacity": 1,
+        "type": "text-and-comment"
+      },
+      "FIXME": {
+        "icon": "tools",
+        "iconColour": "#ff4500",
+        "opacity": 1,
+        "type": "text-and-comment"
+      },
+      "IDEA": {
+        "icon": "light-bulb",
+        "iconColour": "#483d8a",
+        "opacity": 0,
+        "type": "text-and-comment"
+      },
+      "IMPROVE": {
+        "icon": "graph",
+        "iconColour": "#0000ff",
+        "opacity": 1,
+        "type": "text-and-comment"
+      },
+      "ITEM": {
+        "icon": "triangle-right",
+        "iconColour": "#32cd32",
+        "opacity": 0,
+        "type": "text-and-comment"
+      },
+      "LEARN": {
+        "icon": "mortar-board",
+        "iconColour": "#483d8a",
+        "opacity": 0,
+        "type": "text-and-comment"
+      },
+      "LINK": {
+        "icon": "link",
+        "iconColour": "#87CEFA",
+        "opacity": 0,
+        "type": "tag-and-subTag"
+      },
+      "NOTE": {
+        "icon": "info",
+        "iconColour": "#a97eff",
+        "type": "text-and-comment"
+      },
+      "OPTION": {
+        "icon": "share-android",
+        "iconColour": "#800080",
+        "opacity": 0,
+        "type": "text-and-comment"
+      },
+      "PART": {
+        "iconColour": "#63a4a4",
+        "opacity": 1,
+        "type": "whole-line"
+      },
+      "REVIEW": {
+        "icon": "code-review",
+        "iconColour": "#ffd700",
+        "opacity": 1,
+        "type": "text-and-comment"
+      },
+      "ROADMAP": {
+        "icon": "milestone",
+        "iconColour": "#483d8a",
+        "opacity": 0,
+        "type": "text-and-comment"
+      },
+      "SECTION": {
+        "icon": "rows",
+        "iconColour": "#556b2f",
+        "opacity": 1,
+        "type": "text-and-comment"
+      },
+      "SUBSECTION": {
+        "icon": "bookmark",
+        "iconColour": "#006400",
+        "opacity": 1,
+        "type": "text-and-comment"
+      },
+      "TEMP": {
+        "foreground": "#000000",
+        "icon": "hourglass",
+        "iconColour": "#daa520",
+        "type": "text-and-comment"
+      },
+      "TEST": {
+        "icon": "tools",
+        "iconColour": "#0000ff",
+        "opacity": 1,
+        "type": "text-and-comment"
+      },
+      "TODO": {
+        "icon": "flame",
+        "iconColour": "#0000ff",
+        "opacity": 1,
+        "type": "text-and-comment"
+      }
+    },
+    "todo-tree.highlights.defaultHighlight": {
+      "background": "#0000ff",
+      "foreground": "#ffffff",
+      "icon": "check-circle",
+      "iconColour": "#ffffff",
+      "opacity": 0,
+      "type": "text-and-comment"
+    },
+    "todo-tree.highlights.enabled": true,
+    "todo-tree.highlights.foregroundColourScheme": [
+      "White",
+      "White",
+      "White",
+      "Black",
+      "Black",
+      "White",
+      "MediumPurple",
+      "Yellow",
+      "MediumPurple",
+      "MediumPurple",
+      "LightSkyBlue",
+      "OrangeRed",
+      "LightSkyBlue",
+      "DeepPink",
+      "white",
+      "White",
+      "Red",
+      "Orange",
+      "White",
+      "White",
+      "White",
+      "White",
+      "LightGreen",
+      "LimeGreen"
+    ],
+    "todo-tree.highlights.useColourScheme": true,
+    "todo-tree.regex.enableMultiLine": false,
+    "todo-tree.regex.regex": "((?:#|//|/\\*|- |<!--).*?|^)($TAGS)([aA-zZ\\[\\]0-9\\-_~]{3,}|.*?(?:-->|[^\\*]*?\\*/|$))",
+    "todo-tree.regex.regexCaseSensitive": true,
+    "todo-tree.regex.subTagRegex": "(?:[- ])?(?:(?:^| )\\[)([aA-zZ0-9\\-\\._]*?)(?:\\]|\\..*?\\])(?:[- >\\t\\]]*)?",
+    "todo-tree.tree.expanded": true,
+    "todo-tree.tree.filterCaseSensitive": true,
+    "todo-tree.tree.flat": true,
+    "todo-tree.tree.groupedBySubTag": true,
+    "todo-tree.tree.groupedByTag": false,
+    "todo-tree.tree.labelFormat": "${subtag} - ${tag} ${after}",
+    "todo-tree.tree.tagsOnly": false,
+    "todo-tree.tree.tooltipFormat": "${filename}\t(line ${line})\n\r${filepath}\n\r---\n\r${tag} ${after}\n\rsubtag: ${subtag}",
+  }
+}

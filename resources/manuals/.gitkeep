@@ -1,0 +1,15 @@
+# Project's Useful Manuals
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    <i>This folder holds so-called **`manuals`**, which we define as any document
+    providing useful information to the exception of  the project's documentation and the development
+    guidelines, which belong to the <code>workspace(s)</code> and the <code>admin</code>
+    environments, respecitvely. Apart from theses two exceptions, this folder contains all the
+    informational documents like tutorials, manuals, references, etc.</i>
+</i>
+
+</div>
+</div>

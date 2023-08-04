@@ -1,0 +1,13 @@
+# Deployments' Configuration Files
+
+<div style="margin: 0 auto 5ex auto; max-width: 550px">
+
+!!!Abstract
+    <h4 style='margin:12pt 0 5pt 0; text-align:center;'>Abstract</h4>
+    <i>This folder's hosts the  deployments' core  <b><code>configuration</code></b> files. These
+    files povide the project-specific parameters needed by the deployments' scripts. The  data it
+    contains essentially concern the project's specific structure and, in particular, the way the
+    deployment  environments map to the `deploy/` subfolders and where to find the project's
+    releases and these of its subprojects, if any. <br/>&nbsp;</i>
+
+</div>

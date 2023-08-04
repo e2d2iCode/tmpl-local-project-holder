@@ -1,0 +1,11 @@
+# Libraries Assets
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    *This folder hosts the **`libraries`** assets, which  typically consist of collections of classe or
+    functions meant to be invoked by other programs. Typical examples include  `frameworks`,
+    `packages` and, of course, `libraries`..*
+
+</div></div>

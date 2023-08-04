@@ -1,0 +1,14 @@
+<!-- CAUTION This file is shared among all `xternal-vendor-...` folders' `.gitkeep` files [hardlink] -->
+# External Vendor Content
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    *This folder holds the **`vendor`** contents which consist of any material procuded and, thus,
+    maintained by a third party. The motivation for keeping such files in a specific folder is both to
+    clearly identify the contents to be checked for updates from time to time and to exclude them from
+    code analysis and other operations that are not relevant to them, such as linting, testing,
+    documentation generation, etc.*
+
+</div></div>

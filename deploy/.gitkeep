@@ -1,0 +1,230 @@
+# Deployment's environment
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    <i>This directory hosts the project's <b><code>deployment</code></b> environment. It provides
+    everything needed to deploy the project to the different environments it is susceptible to be
+    deployed to.</i>
+
+</div></div>
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
+<details open style="margin: 14pt 0pt 24pt 10pt">
+<summary style="margin-left: -8pt; font-weight: bold; font-size: larger; font-variant: small-caps">
+<span style="margin-left: 3pt">Table of contents<span></summary>
+
+<!-- code_chunk_output -->
+
+- [Overview](#overview)
+- [The Folderr's Root Structure](#the-folderrs-root-structure)
+- [How Deployments Work](#how-deployments-work)
+- [Structure and contents](#structure-and-contents)
+  - [The *.cmds* folder](#the-cmds-folder)
+  - [The *.config* folder](#the-config-folder)
+  - [The *.sources* folder](#the-sources-folder)
+  - [The *archives* folder](#the-archives-folder)
+  - [The *target-name@location* folders](#the-target-namelocation-folders)
+- [The deployments' process](#the-deployments-process)
+- [The `deploy` command](#the-deploy-command)
+
+<!-- /code_chunk_output -->
+
+</details>
+
+## Overview
+
+This directory is where *deployments* happen. It wraps everything needed to deploy the project to
+the concerned environments, which include scripts, actions, and config files, but also quick access to
+the latest release(s) and links to the deployments' targets.
+
+## The Folderr's Root Structure
+
+The `deploy` folder's consists of three hidden folders holding the data that are shared by all the
+deployments' targerts, to which add as many visible folders as there are deployments' tagets. The
+latter represent the deployments' environment, which role is quickly presented in the next section
+below. The folder tree is as follows:
+
+```text
+  .                         ROOT FOLDER (Project's name)
+  |                         ´´´´´´´´´´´´´´´´´´´´´´´´´´´´
+  ├─ .cmds                  # Contains the shared deployments' scripts.
+  ├─ .config                # Contains the shared deployments' config  files.
+  ├─ .sources               # A temporary holder for the sources to be deployed.
+  ├─ archives               # An archive of all deployments, regardless of their target.
+  ├─ production@host        # Mimmicks a folder representing a remote deployment target.
+  ├─ vers-releas@local      # Contains everthing that is specific to deploying as a local release.
+  └─ ...                    # As many additional folders as there are additional deploy. targets ...
+```
+
+A quick description of the role and contents of these folders is provided  in Section
+[Structure and contents](#structure-and-contents), below.  For more information about each of them
+individually, refer to their own  `.gitkeep` file.
+
+## How Deployments Work
+
+Each *specific deployment's environment*, also called a *deployment's target*, is represented by a
+folder which name is of the form `target-name@location` and which contains the scripts and
+parameters that are specific to the concerned deployment target. The deployed code is this
+contained in the `.sources` folder.
+
+To deploy the project to a given environment, the user simply runs the `deploy` script from within the
+concerned `target-name@location` folder. This way, handling the deployment's permissions amounts
+to simply granting or denying access to the different `target-name@location` folders. Also, as these
+folder share the same structure, implementing the deployments' scripts such that they load their
+parameters using relative paths is a quick and efficient way to ensure that they will run using the
+settings specific to the concerned deployment target.
+
+## Structure and contents
+
+This folder hosts the project's `deployment` senvironment. It contains everything needed to deploy
+the project to the concerned environments (e.g., `production`, `staging`, `testing`). The configuration,
+commands and archives specific to a given deployment target lies in a folder named after the
+concerned environment. The release(s) to be deployed as well as everything that is common to
+every deployment is stored in the folders `.cmds`, `.sources`, and `configuration` at the root of the
+present directory.
+
+### The *.cmds* folder
+
+The `.cmds` folder  hosts the deployments' scripts and commands that are common to all the
+deployments. The scripts it contains essentially provide the deployment's core logic. They are
+expected to be simple and generic enough to require very few, if any, changes not only from one
+project to another, but  also from one deployment target to another. This is archieved by letting them
+rely on other scripts for all the environment-specific tasks. Theses other scripts are stored in
+subfolders which names are of the form `target-name@location` like, for example,
+`production@local` (a detailed description of these folders and their contents is given
+ [below](#the-target-namelocation-folders)).
+
+As they shouldn't need to be modified once the project is set up, it is recommended to protect them
+from any accidental change. The safest way to do it is of course to restrict their access to
+administrators only, but doing so is not always possible or practical. Encouraging this practice by
+making the `.cmds` folder hidden or, even, by simply marking it as such by adding a leading dot to its
+name turns out to be a quick and efficient way to archieve the same goal, while keeping the folder
+visible to all which is beneficial for the understanding of the project's structure. Also note that doing
+so doesn't forbid to make the folder hidden or read-only for non-administrators as well in the case
+when this would show to be necessary.
+
+### The *.config* folder
+
+The `.config` folder is the place where the configuration files that are common to all the deployments
+are stored. The data it contains essentially concern the projects' specific structure and provide the
+paths to the deployments' essentials, like the releases and the internal structure of the `deploy`
+folder. As for commands, these files rely on specialized configuration files that are specific to each
+deployment target for information with finer granularity. Then,  as for the `.cmds` folder, few
+customization is expected, standard users shouldn't access those files, which, at least as a fiirst
+step, we attempt to archivethe soft way consisting only in naming the folder `.config` rather than
+`config` to point out that it is meant to be hidden.
+
+### The *.sources* folder
+
+The `.sources` folder is where the deployment scripts look for the sources to deploy.It is expected to
+be a temporary folder that is used only during the deployment procedure and that gets cleaned out
+at the end of it.  Note that before being effectively deployed, the sources transition by another
+`.sources` folder that is internal to the targetted environments' folder. That intermediary step allows
+for the sources format to be adapted to the target environment's requirements, if needed. Both
+folders should be cleaned out at the end of the deployment procedure.
+
+Note that in order to keep the `deploy` folder's root structure intact, the `.sources` folders themselves
+are left alone and only their contents are cleaned out. As for the other deployments' tasks, handling
+the content of the `.sources` folders is fully delegated to the deployment's scripts. This is the reason
+why these folders' names  also sticks to the hidden naming convention and are preceded by a dot.
+
+### The *archives* folder
+
+The `archives` folder stores the archives of all the deployments, regardless of their target. its
+contents complies with the template's guidelines described in `/admin/guidelines`. In
+particular, as every other archive or backup folder, its contents are named after the dedicated
+scheme described in
+[handling-archives](./../admin/guidelines/handling-archives/handling-archives.md).
+
+It is worth mentioning that the `archives` folder found in the subfolders representing a particular
+ target are just junctions to the present one. This way, the archives of all the deployments are
+stored in a single location, which makes it easier to manage them and to keep track of the project's
+history. It also makes it easier to have them also backed up in the project's main archive, which is
+ located in the `.bak` folder at the root of the project's folder tree.
+
+ Also note that the recommended way to do the backup to the main archive mentionned above is to
+ use *hard links* pointing to the files of the present folder. This way, the files are not duplicated,
+ which is faster and saves disk space, while being protected from accidental deletion by the fact that
+ *hard linked files* are not deleted until all the links pointing to them are removed. Under
+ Windows, this can be done very efficiently using the
+[Link Shell Extension](https://tinyurl.com/5n7md3ycl) which provides a context menu entry to create
+hard links or its command line counterpart,  [ln.exe](http://schinagl.priv.at/nt/ln/ln.html).
+
+### The *target-name@location* folders
+
+Each `target-name@location` folders represents a deployment type. Such a folder holds the
+scripts and configuration files that are specific to given deployment target and location. For example,
+if a project is deployed to two production environments named, say, `my-laptop` and `my-drive`, the
+folder `production` would contain two subfolders named `production@my-laptop` and
+`production@my-drive`.
+
+This template provides two such folders, namely `production@host` and `new-release@rel`,
+that mimic the deployment of a project to some hypothetical *production site* and as a
+*locally stored release*, respectively. The former is meant to be used as a template for the
+deployment to any production environment. The latter implements a deployment to the `@rel` folder
+of the present project's shell, which is the folder where the project's, and its subprojects', lates
+releases are stored and exposed to the local file system. At the time of writing, though, these folders
+only implement the stucture they will have and contain the associated `.gitkeep` files explaining the
+role of their subfolders and how they are expected to be used throughout the deployment process.
+The actual scripts and configuration files are still to be implemented and will be added as the need
+arises.
+
+<!-- ROADMAP This needs to be completed and the deployments' scripts need to be implemented. See .cmds/.gitkeep which already contains some docs about it! [deploy] -->
+
+## The deployments' process
+
+As mentionned above, the deployment scripts have not been implemented yet, and will be added as
+the need arises. The corresponding documentation will be added here at the same time. The
+following is just a sketch of how the deployment process is expected to work.
+
+<div style="margin: 5ex auto 8ex auto; max-width: 600px">
+
+!!!Danger CAUTION - The following is strongly subject to change!
+    Do **not** consider the following as a reliable documentation of the deployment process. It is only
+    a quick sketch that is strongly subject to change!
+
+</div>
+
+## The `deploy` command
+
+The deployment process is initiated by calling the `deploy` command, which is roughly the only one
+that should be called directly and which building blocks are the scripts found in this folder. In turn,
+these scripts call the specialized scripts found in the target environments' folders. A brief description
+of each of them as well as their general syntax are provided in the next section, below.
+
+The `deploy` command' default is to deploy the contents of the `sources` folder to the `production`
+environment, but options allow to select a specific project's or subproject's version to use as source,
+as well any environment as target. Its syntax is as follows:
+
+```powershell
+deploy   [ [ -s|--source ] <source> ]   [ [ -t|--target ] <target> ]    [ -p|--project <project-path> ]   [ -c|--clean ]   [ -a|--archive ]
+```
+
+where:
+
+```text
+-s|--source <source>
+´´´´´´´´´´´´´´´´´´´´´´´´`´´´
+    The source to deploy, which is assumed to be the name of a subfolder of the sources` folder.
+    If not specified, the whole contents is considered a single project and deployed as such.
+
+-t|--target <target>
+´´´´´´´´´´´´´´´´´´´´´´´´`
+    The target environment to deploy to. If not specified, the `production` environment is assumed.
+    Specifying `all` deploys to all environments.
+
+-p|--project <project-path>
+´´´´´´´´´´´´´´´´´´´´´´´´`´´´´´´´´´´
+    This option identifies a project to be copied to the `sources` folder before deployment. If this
+    option is specified and the `--source` one is not, then only the contents of the `sources` folder
+    that was just copied is deployed, regardless of what it may have already contained.
+
+-c|--clean
+´´´´´´´´´´´´
+    If specified, the `sources` folder is cleaned out after deployment.
+
+-a|--archive
+´´´´´´´´´´´´´´
+    If specified, the deployed project is archived in the `archives` subfolder of the target environment.
+```

@@ -1,0 +1,18 @@
+# Releases' Archives
+
+<div style="
+    font-size: normal;
+    margin: 0 15% 5ex 10%;
+    min-width: 38em; max-width: 43em;"
+>
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    <i>This folder <b><code>achives</code></b> the projects'/suprojects'. As any other archives'
+    folder, its contents must be named according to the project's guidelines that are available in the
+    `admin` environment. For a detailed description of the conventions to follow, see
+    <a href="./../../../admin/guidelines/handling-archives/handling-archives.md)">
+        handling-achives
+    </a>.</i>
+
+</div></div>

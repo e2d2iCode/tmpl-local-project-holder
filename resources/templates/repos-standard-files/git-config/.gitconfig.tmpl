@@ -1,0 +1,19 @@
+[diff "exif"]
+  binary = true
+  textconv = exiftool# requires exiftool installed
+  cachetextconv = true
+
+[diff "lisp"]
+  xfuncname = "^(\\(.*)$"
+
+[diff "pdf"]
+  textconv = pdftotext# requires xpdf installed
+
+[diff "rstats"]
+  xfuncname = "^([a-zA-z.]+ <- function.*)$"
+
+[diff "texinfo"]
+  xfuncname = "^@node[ \t][ \t]*\\([^,][^,]*\\)"
+
+[diff "orgmode"]
+  xfuncname = "^(\\*+.*)$"

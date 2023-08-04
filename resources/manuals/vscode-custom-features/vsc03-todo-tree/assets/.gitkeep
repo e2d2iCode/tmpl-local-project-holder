@@ -1,0 +1,14 @@
+# Assets Folder
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    *This folder contains the **`assets`** of the project at hand, which are ready-to-use files to be
+    embedded in the project's deliverables at build time. They  are typically binary files, such as
+    images, audio, or video files, but they can also be  text files, such as configuration files, or even
+    executable files, such as scripts or  libraries, as long as the building process includes them as
+    they are.*
+
+</div>
+</div>

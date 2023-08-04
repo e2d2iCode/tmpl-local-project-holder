@@ -1,0 +1,13 @@
+# Styling Assets
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    *This folder hosts the **`stying assets`**. These elements can range from a simple stylesheet to a
+    full-fledged framework, including custom fonts. Typical examples include `themes`, `fonts` and
+   cascading style sheets like [`CSS`](https://www.w3.org/Style/CSS/Overview.en.html)
+  [`LESS`](http://lessCSS.org/) and  [`SASS`](https://sass-lang.com) files.*
+
+</div>
+</div>

@@ -1,0 +1,67 @@
+# User's Templates
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    *This folder holds standard **`Git`** configuration files, namely `.gitignore`, `.gitattributes`, and
+    `.gitignore`.*
+
+</div></div>
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
+<details open style="margin: 14pt 0pt 24pt 10pt">
+<summary style="margin-left: -8pt; font-weight: bold; font-size: larger; font-variant: small-caps">
+<span style="margin-left: 3pt">Table of contents<span></summary>
+
+<!-- code_chunk_output -->
+
+- [Overview](#overview)
+- [The *.gitattributes* file](#the-gitattributes-file)
+- [The *.gitignore* file](#the-gitignore-file)
+- [The  *.gitconfig* file](#the--gitconfig-file)
+
+<!-- /code_chunk_output -->
+
+</details>
+
+## Overview
+
+This directory contains templates for the standard `Git` configuration files, namely: `.gitattributes`,
+`.gitignore` and `.gitignore`. These files are meant to be copied to the repository's root folder. Note
+that only  `.gitignore` which comes with only instructions in its comments is expected to need to be
+updated on a per-project basis.
+
+More information about the purpose and content of each template is provided in the following
+sections.
+
+## The *.gitattributes* file
+
+This file is used to associate attributes with pathnames. It is used by `Git`
+to match files and directories to attributes that tell `Git` how to manage
+them.
+
+**The provided template is expected to cover most situations and, thus,**
+**to need little to no modification**.
+
+## The *.gitignore* file
+
+This file is used to specify intentionally untracked files that `Git` should
+ignore. The provided template is empty and is meant to be updated using
+[Toptal's generator](https://www.toptal.com/developers/gitignore) first, and
+then to be completed with any additional file or folder specific to the project
+at hand. More information about the generator and custom entries is
+available in the template's comments.
+
+## The  *.gitconfig* file
+
+This file is used to specify the configuration of the `Git` command-line
+interface and of the `Git` tools. The provided template sets up configuration
+options concerning *Diffs*. More precisely, it sets up, on a per-file-type
+basis, how `Git` should display the differences between the working tree
+and the index, and between the index and the last commit. Such options
+showed up to be useful in the context of `LaTeX` projects to improve the
+readaility of the `texinfo` and `pdf` files' diffs.
+
+**The provided template is expected to cover most situations and, thus,**
+**to need little to no modification**.

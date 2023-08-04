@@ -1,0 +1,19 @@
+# A Subproject of the Project at Hand
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    This folder hosts a **`subproject`** of the project at hand. The subproject itself may or may not be
+    versioned. If it is, then it typically consists of a
+    [GitHub Submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules). Otherwise, it is a
+    simple folder containing the subproject's sourcefiles at its root. In both cases, though, the
+    `workspaces` folder should have been renamed to `workspace`.
+    <br/>
+     Note that such a folder exists only if the project at hand consists of multiple subprojects. If it does
+     not, the name of the `workspaces` folder should have been left unchanged and its sourcefiles - or
+     repo structure - should have been placed directly at its root.
+
+ </div></div>
+
+<!-- EDIT This folder is a placeholder to be replaced by the project's files or a subproject folder [subproject] -->

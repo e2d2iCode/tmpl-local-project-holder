@@ -1,0 +1,51 @@
+
+# GitHub Actions
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    <i>This folder holds templates that are specific to <b><code>GitHub Actions</code></b>, which are workflows, which includes
+    interfaces to be used by the users to request pull, to communicate about issues or  to get
+    information about the repository. It also holds scripts to be used by the maintainers to automate
+    certain tasks.</i>
+
+</div></div>
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
+<details open style="margin: 14pt 0pt 24pt 10pt">
+<summary style="margin-left: -8pt; font-weight: bold; font-size: larger; font-variant: small-caps">
+<span style="margin-left: 3pt">Table of contents<span></summary>
+
+<!-- code_chunk_output -->
+
+- [Overview](#overview)
+- [Available Workflows](#available-workflows)
+
+<!-- /code_chunk_output -->
+
+</details>
+
+## Overview
+
+[GitHub Actions](https://docs.github.com/en/actions) are workflows that can be used to automate
+certain tasks ranging from simple maintenance tasks to complex software development processes.
+Each workflow is defined in a *YAML* file that must be stored in the
+[`.github/workflows`](/.github/workflows) folder.
+
+## Available Workflows
+
+For now at least, the scripts implemented here are simple automation tasks that can be used by the
+maintainers to automatically label, close, or respond to issues and pull requests. More specifically,
+the following workflows are implemented:
+
+- [welcomer.yml](welcomer.yml): welcomes new contributors
+- [pull-labeler.yml](pull-labeler.yml): assigns labels to pull requests
+- [pull-merger.yml](pull-merger.yml): automatically merges pull requests
+- [change-logger.yml](change-logger.yml): uses git-cliff to generates a change log
+
+Workflows are triggered by *GitHub* events, such as the creation of an issue or pull request. For
+instance, the `pull-labeler.yml` workflow when a pull request is created or updated.
+
+For detailed information about *GitHub Actions and Workflows*, please refer to the
+[Official Dcumentation](https://docs.github.com/en/actions).

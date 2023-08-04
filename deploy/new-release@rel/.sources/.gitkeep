@@ -1,0 +1,15 @@
+<!-- CAUTION This file is shared among all specific deployment environment [hardlink] -->
+# Target Specific Deployment's Sources
+
+<div style="margin: 0 auto 5ex auto; max-width: 550px">
+
+!!!Abstract
+    <h4 style='margin:12pt 0 5pt 0; text-align:center;'>Abstract</h4>
+    <i>This folder's holds the <b><code>sources</code></b> that need to be deployed to the
+    `production@host`. These files are brought here from the `deploy/.sources` the deployment
+    scripts specific to the `production@local` environment. Depending on the deployment's target's
+    nature, this operation may not consist of a a simple copy, but involve certain customization of
+    the sources to have them fit the exact format that is expected by the development environment.
+    <br/>&nbsp;</i>
+
+</div>

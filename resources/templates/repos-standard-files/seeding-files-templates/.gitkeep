@@ -1,0 +1,54 @@
+# Templates for repositories' standard elements
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    *This folder contains templates for the files commonly found in
+    **`repositories`**, namely `SECURITY.md`, `CODE_OF_CONDUCT.md` and `CHANGELOG.md`.
+    The needed replacements, if any, are indicated by placeholders as all-capitals words surrounded
+    by a pair of double `@` symbols, like`@@PLACEHOLDER@@`.*
+
+</div></div>
+
+## Overview
+
+This folder contains templates for the files other than the lcommonly found in repositories, namely `SECURITY.md`, `CODE_OF_CONDUCT.md` and `CHANGELOG.md`. Note that both the license and the readme files are not included here as they are handled in their own folders. More information about each of the templates provided here is given in the following sections.
+
+## Changelog template
+
+The changelog template is a markdown file that contains the skeleton structure of a changelog and a model to be used to create new entries. It is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and assumes that the `v2.0.0` [Semver](https://semver.org/spec/v2.0.0.htmlspec/v2.0.0.html) specifications are used to version the project. It requires the following fields to be updated:
+
+- `<vers>`: the version number, e.g. `v0.1.0`
+- `<yyy-mm-dd>`: the date of the release, e.g. `2021-01-01`
+- `<this>`: the version that the changelog entry refers to, e.g. `v1.4.3` or `HEAD`
+- `<to-that>`: the version to compare to e.g. `v1.3.0` or *nothing* for the first release
+- `<repo-url>`: the URL of the repository, e.g. `https://github.com/e2d2ipi/tmpl-local-project-holder/`
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+
+!!!Hint
+    Recall that, according to the Semver specifications, the `v0.X.Y` versions are meant to be used for the initial development phase, and that the first release should be `v1.0.0`.
+
+</div>
+
+As is, the templatee already contains a section for the `v0.0.0` version, which is meant to refer to the initial commit, and a newer section labeled `Unreleased` ready to be fed with the changes to be included in the next release. The latter section is meant to be updated as the project evolves, and the former is meant to be updated only once, when the project is first released.
+
+## Code of conduct template
+
+The code of conduct template is a markdown file that contains standard code of conduct guidelines. It is based on the [Contributor Covenant](https://www.contributor-covenant.org/). This template is meant to be used in conjunction with the `CONTRIBUTING.md` template, which links to this file assuming it is found at the root of the repository.
+
+**!!! Note that template is ready to be used and needs no further editing.**
+
+## CONTRIBUTING template
+
+The contributing template is a markdown file that contains standard information aout how to contribute to the project. It is based on the [Contributor Covenant](https://www.contributor-covenant.org/). This template is ready to be used and needs no further editing.
+
+**!!! Note that this file refers to the file `CODE_OF_CONDUCT.md` which it links to assuming it is found at the root of the repository. If this is not the case, the link must be updated accordingly.**
+
+## Security policy template
+
+The security policy template is a markdown file that contains standard information about how to report security issues. It contains a section for telling users which versions of the project are currently being supported, and a section for telling them how to report security issues. The following fields need to be updated:
+
+- @@USER@@: the `username` part of the repository's URL, e.g. `e2d2ipi`
+- @@REPO@@: the `repository` part of the repository's URL, e.g. `tmpl-local-project-holder`

@@ -1,0 +1,17 @@
+# User-Interface (UI) Assets
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    *This folder hosts all assets that relate to the **`user interface`**, which can be described as all
+    the graphical elements that display in the projects without needing any specific plugin, that require
+    no further processing at build-time, and that functional elements rather than illustrations of the
+    project's contents. Typical examples of such assets include `icons`, `buttons`, `logos`,
+    `profile pics`, `wallpapers`, etc...<br/>
+    This folder contains two default sets of ui-assets, namely the full collection of `octicons` in `.svg`
+    format, and the `e2d2ipi` logo in varous colors and shapes. These assets are to be found in
+    folders named accordingly.*
+
+</div>
+</div>

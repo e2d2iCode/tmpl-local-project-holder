@@ -1,0 +1,25 @@
+# Releases' Folder
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    *This folder exposes the project's and its subproject's **`distributions`** to the local system and
+    keeps an archive of all the past releases.ç
+
+</div>
+</div>
+
+## Overview
+
+This folders is meant to expose the distributions of the project and its subprojects to the local
+system. It is worth pointing out that the exposure it provides should be considered strictly transient.
+Indeed, not only are distributions passing by definition but, in order not to crowd the *working space*
+folder too much,  projects that are not regularly worked on are meant to be either archived or staged.
+
+The recommended way to share this folder's content is to rely on the *hardlink clone* mode of the
+[`ln` command](https://schinagl.priv.at/nt/ln/ln.html#introduction) which, as its name suggests,
+<i>clones a folder using hard links</i>. This command then has the double upside to provide
+multiple access points to the exact same set of files and to ensure their sustainablity at the same
+time, since the the file targeted by a hard link is not deleted until the last hard link pointing to it is
+deleted.

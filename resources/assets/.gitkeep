@@ -1,0 +1,55 @@
+# Personal Assets Folder
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    *This folder contains the user's **`assets`** (library), which can be assets per se or any other file
+    that can be used to generate such assets. The files to be found here provide assets that may be
+    valuable for the project's development but are not, per se, part of the project deliverables.*
+
+</div>
+</div>
+
+## Overview
+
+This directory contains assets that are not, per se, part of the project deliverables but may be
+valuable for the project's development. For example, its content may include widely used elements
+that team members need to share or assets that a single member uses across different projects.
+
+## What's an Asset?
+
+Generally speaking, an asset is any file that is not a source code file but is part of the project. Assets
+are typically binary files, such as images, audio, or video files. Still, they can also be text files, such
+as configuration files, or even executable files, such as scripts or libraries, as long as the building
+process includes them as they are.
+
+In the context of the present folder, however, the term `asset` needs to be interpreted in a broader
+way. Here, we let the term `asset` refer to any file that may play the role of an asset in the project's
+development or that may serve to generate one.
+
+## The Assets Folder's Structure
+
+The assets folder is organized in subfolders that group assets by their nature. The tree below shows the assets folder's structure and broefly describes each subfolder's content. For more details on each type of asset, please refer to the `.gitkeep` file of the corresponding subfolder.
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+
+```tree
+
+
+  .                        ASSETS FOLDER
+  |                       ´´´´´´´´´´´´´
+  ├── css                   # Styling assets and fonts
+  ├── exec                  # Executable codes like scripts
+  ├── images                # Non-UI graphical assets like images
+  ├── libraries             # Reusable codes like packages and librairies
+  ├── multimedia            # Multimedia assets that are neither img nor UI
+  |   ├── audio               # Audio and sound-like assets
+  |   └── videos              # Video and animation-like assets
+  |
+  ├── to-download           # Files that are provided as downloadable content
+  └── user-interface        # UI-related assets like icons, logos and wallpapers
+
+```
+
+</div>

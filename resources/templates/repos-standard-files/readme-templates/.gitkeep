@@ -1,0 +1,14 @@
+# README Templates
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    <i>This folder contains templates of <b><code>README</code\</b> files in makdown format.
+    Different templates match different use cases are provided. Placeholders as all-capitals words
+    surrounded by a pair of double `@` symbols, like `@@PLACEHOLDER@@`, are used to indicate
+    where the user should edit the template in order to match the project's context. In addition, a
+    comment designed to be detected by VSCode's Todo-Tree extension as an <code>EDIT</code>
+    entry is placed at the end of the file, in order to remind the user to edit the template.</i>
+</div>
+</div>

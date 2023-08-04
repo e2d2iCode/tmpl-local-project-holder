@@ -1,0 +1,8 @@
+# Continous Backups
+
+<div style="width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    <i>This folder hosts the near real-time backups of VSCode's <b><code>local-history</code></b> extension. As such, it needs to be excluded from all searches and scans.</i>
+</div></div>

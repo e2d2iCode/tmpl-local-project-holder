@@ -1,0 +1,35 @@
+# Resources Folder
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    *This folder hosts the  user's personal **`resources`**. Its content is not necessarily strictly tight to
+    the project at hand, but rather consists of a collection of potentially useful tools selected by the
+    user based on the project's context. As such, part of it may be shared with - or copied from - other
+    projects.*
+
+</div></div>
+
+## Overview
+
+This folder contains the user's personal *development resources*. Its contents are not necessarily
+strictly tight to the project at hand, but rather consist of a collection of potentially useful material
+selected by the user based on the project's context. As such, part of it may be shared with - or
+copied from - other projects. The folder is organized in subfolders, each of which is dedicated to a
+specific type of resource. The tree below shows the resources folder's structure and briefly describes
+each subfolder's content. For more details on each type of resource, please refer to the `.gitkeep`
+file of the corresponding subfolder.
+
+``` tree
+
+
+   .                    RESOURCES FOLDER
+   |                    ´´´´´´´´´´´´´´´´´
+   ├─ assets             # Assets or files that can generate assets
+   ├─ manuals            # Useful refs, manuals, tutorials ansd guides
+   ├─ templates          # Can be snippets, files or complete directories
+   ├─ useful-toos        # Utilities meant to be used during the development
+   └─ worth-keeping      # Code fragments, snippets, or other useful material
+
+```

@@ -1,0 +1,18 @@
+# Styling Assets
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    <i>This folder hosts the <b><code>stying assets</code></b>. These elements can range from a
+    simple stylesheet to a full-fledged framework, including custom fonts. Typical examples include
+    <ul style="margin-top: 3pt; margin-left: -10pt"><li>theming specifications,</li>
+    <li><a href="https://tug.org/TUGboat/tb15-3/tb44braams.pdf"><code>.cls</code></a>
+    used to style LaTeX documents, or</li> <li>cascading style sheets like
+    <a href="https://www.w3.org/Style/CSS/Overview.en.html"><code>CSS</code></a>,
+    <a href="http://lessCSS.org/"><code>less</code></a>, or
+    <a href="https://sass-lang.com/"><code>sass</code></a>.
+</i>
+
+</div>
+</div>

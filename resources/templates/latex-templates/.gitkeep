@@ -1,0 +1,11 @@
+# LaTeX Templates
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    <i>This folder holds templates to be used in the context of <b><code>LaTeX</code></b> projects. The provided models aim not only to match the needs of  <code>.tex</code>, <code>.sty</code> and <code>.cls</code> files, but to cover the different types of files, based on the role they play.</i>
+
+</div></div>
+
+<!-- ROADMAP The files in this folder are only placeholders that still need to be implemented. This will be done only when needed [latex] -->

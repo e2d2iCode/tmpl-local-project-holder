@@ -1,0 +1,13 @@
+# Folder Hirarchies Templates
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    *This folder contains templates consisting in `folder hierarchies` like the `assets` folder. The
+    included `.gitkeep` files were redacted such as being as generic as possible, but still typically
+    need to be sligthly modified in order to match the project's context. If so and VSCode's Todo-Tree
+    extension is used, the latter should display an entry about the needed `EDIT`.*
+
+</div>
+</div>

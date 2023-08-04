@@ -1,0 +1,18 @@
+# Documentation's Assets
+
+Folder [docs/assets][def] holds the documentation's assets. This templates recommends letting [Jekyll][jekyll] generate a [GitHub Pages site][/gh-pages] from the content of folder [docs][docs]. The resulting documentation's look can be further customized using one of the decently many **customizable** [supported themes][themes]. The current template originally came with an implenetation based on Jekylls' [_Midnight_ Theme][midnight] which is still implemented in its hosting repository [github-templates](https://e2d2ipi.github.io/github-templates/).
+
+## Why use a `.gitkeep` file?
+
+As [Git doesn't track empty directories][gitkeep], adding a `.gitkeep` file to a directory is a way to ensure that it will not be ignored when empty. A typical use case is to enforce a filesystem shelf to be fully and consistently uploaded/synced to a repository.
+
+### Why have such a file in every folder, including never-empty and non-synced ones?
+
+In this template, `.gitkeep` files are further used to document the filesystem's architecture, the reason why each folder, whether empty or not, holds such a file. Doing so is admittedly quite time-consuming, but the gain in consistency sound worthwhile in the long term. Indeed, explicitly describing the role of every folder upon creation enforces deeper thinking about the filesystem architecture, tends to immediately point out inconsistencies and/or redundancies, and, then, further favours its correct usage.
+
+[def]: ../assets/
+[docs]: ../../docs/
+[jekyll]: https://jekyllrb.com/
+[gh-pages]: https://docs.github.com/en/pages
+[jekyll-theme]: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
+[gitkeep]: https://git.wiki.kernel.org/index.php/Git_FAQ#Can_I_add_empty_directories.3F

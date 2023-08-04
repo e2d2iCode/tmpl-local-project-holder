@@ -1,0 +1,11 @@
+# Repositories standard files
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    *This folder holds templates for the files commonly found in **`repositories`**. The corresponding
+    files are organized in subfolders grouping them by type. For details on the purpose of each type,
+    please refer to the `.gitkeep` file in the corresponding subfolder.*
+
+</div></div>

@@ -1,0 +1,145 @@
+# GitHub Templates
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    <i>This folder holds templates that are specific to <b><code>GitHub</code></b>, which includes
+    interfaces to be used by the users to request pull, to communicate about issues or  to get
+    information about the repository. It also holds scripts to be used by the maintainers to automate
+    certain tasks.</i>
+
+</div></div>
+
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
+<details open style="margin: 14pt 0pt 24pt 10pt">
+<summary style="margin-left: -8pt; font-weight: bold; font-size: larger; font-variant: small-caps">
+<span style="margin-left: 3pt">Table of contents<span></summary>
+
+<!-- code_chunk_output -->
+
+- [Overview](#overview)
+- [GitHub Actions](#github-actions)
+- [Issues Templates](#issues-templates)
+- [Pull Request Template](#pull-request-template)
+- [GitHub Pages Template (`docs` folder)](#github-pages-template-docs-folder)
+
+<!-- /code_chunk_output -->
+
+</details>
+
+## Overview
+
+This folder holds templates that are written specifically for *GitHub*. Besides the
+[GitHub Action](https://docs.github.com/en/actions)  to be used by the maintainers to automatically
+execute certain tasks, it also holds a few templates that *GitHzub* can use to generate interfaces
+allowing users to *request a pull*, to *point out at issues* such as a bug, a vunerability or a missing
+feature, or to simply *get information* about the repository in a website-like format.
+
+The following tree shows the folder's architecture and briefly describes the content of each subfolder.
+More details are available in the next sections.
+
+```tree
+
+
+  .                             GH-TEMPLATES' FOLDER
+  |                             ´´´´´´´´´´´´´´´´´´´´
+  ├── docs-_layouts              # Gh-Pages' templatesite
+  │   ├── assets                    # The site's assets
+  │   │   ├── css                      # The styling assets
+  │   │   |   └── style.css               # A basic stylesheet used by `default.html`
+  │   │   |
+  │   │   └── images                   # The imges assets
+  │   │       └── ...                     # No images for now
+  │   │
+  │   ├── _config.yml                # The site's configuration file
+  │   └── default.html           # The template used by Jekyll to generate the site
+  |
+  ├── ISSUE_TEMPLATE                # Holds the `Issue templates``
+  │   ├── bug_report.md               # Interface to report a bug
+  │   ├── feature_request.md          # Interface to request a new feature
+  │   └── vulnerability_report.md     # Interface to report a vulnerability
+  |
+  ├── workflows                     # Holds the `GitHub Workflows`
+  │   ├── change-logger.tmpl.yml      # Generates changelog entries
+  │   ├── pull-labeler.yml            # Assigns labels to pull requests
+  │   ├── pull-merger.yml             # Automatically merges pull requests
+  │   ├── welcomer.yml                # Welcomes new contributors
+  |
+  └── pull_request_template.md      # Interface to request a pull
+
+
+```
+
+## GitHub Actions
+
+[GitHub Actions](https://docs.github.com/en/actions) are workflows that can be used to automate
+certain tasks ranging from simple maintenance tasks to complex software development processes.
+Each workflow is defined in a *YAML* file that must be stored in the
+[`.github/workflows`](/.github/workflows) folder.
+
+For now at least, the scripts implemented here are simple automation tasks that can be used by the
+maintainers to automatically label, close, or respond to issues and pull requests. More specifically,
+the following workflows are implemented:
+
+- [welcomer.yml](welcomer.yml): welcomes new contributors
+- [pull-labeler.yml](pull-labeler.yml): assigns labels to pull requests
+- [pull-merger.yml](pull-merger.yml): automatically merges pull requests
+- [change-logger.yml](change-logger.yml): uses git-cliff to generates a change log
+
+Workflows are triggered by *GitHub* events, such as the creation of an issue or pull request. For
+instance, the `pull-labeler.yml` workflow when a pull request is created or updated.
+
+For detailed information about *GitHub Actions and Workflows*, please refer to the
+[Official Dcumentation](https://docs.github.com/en/actions).
+
+## Issues Templates
+
+*GitHub issues* are a great way to communicate with the maintainers of a repository. Here, we provide three different templates, which names are self-explanatory:
+
+- [bug_report.md](ISSUE_TEMPLATE/bug_report.md): to report a bug
+- [feature_request.md](ISSUE_TEMPLATE/feature_request.md): to request a new feature
+- [vulnerability_report.md](ISSUE_TEMPLATE/feature_request.md): to report a vulnerability
+
+*GitHub* expects these templates to be written in *Markdown* or *Html* and stored in the
+[`.github/ISSUE_TEMPLATE`](/.github/ISSUE_TEMPLATE) folder, at the root of the concerned
+repository. *GitHub* automatically updates its interface according to the templates it finds. Then,
+when a user starts a new issue, it automatically generates a form using the content of the template
+selected by the user. Note that [GitHub Action](https://docs.github.com/en/actions) can be used to
+automatically label, close, or respond to issues
+(more on this in Section [GitHub Actions](#github-actions), below).
+
+## Pull Request Template
+
+As for issues, it is also possible to provide a template that *GitHub* will use to generate a
+*pull request* interface. The template must be written in *Markdown* or *Html* and stored at the
+root of the [`.github`](/.github) folder. Again, [GitHub Action](https://docs.github.com/en/actions)
+can be used to automatically label, close, or respond to pull requests
+(more on this in Section [GitHub Actions](#github-actions), below).
+
+## GitHub Pages Template (`docs` folder)
+
+*GitHub* can also generate a *GitHub Pages* site from the content of the `docs/_layout` folder it
+finds at the root of the repository. The `docs/_layout` folder of the present directory holds a basic
+template that displays the content of the [`README.md`](/README.md) file in a website-like format. The resulting site can be accessed at the following URL:
+
+```url
+https://<username>.github.io/<repository-name>
+```
+
+where `<username>` is the name of the user or organization that owns the repository and
+`<repository-name>` is the name of the repository.
+
+The generated site is further customized in the [`_config.yml`](_config.yml), which
+specifies the site's title, description, base URL, etc.... More interestingly, it can specify the theme to
+be used by the the site. For instance, the present configuration file uses
+[Jekylll's midnight](https://github.com/pages-themes/midnight/tree/master/_includes)
+theme, but there are many others to choose from in the
+[GitHub Page's theme gallery](https://pages.github.com/themes/).
+
+**!!! Note that *GitHub* expects to find the configuration at the root of the repository !!!**
+
+For detailed information about the
+configuration file and Jeckyll, see the
+[GitHub Pages documentation](https://docs.github.com/en/pages/) and/or the [Jekyll weebsite](https://jekyllrb.com/).

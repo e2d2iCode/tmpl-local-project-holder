@@ -1,0 +1,28 @@
+# GitHub's Issue Templates
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    <i>This folder holds GitHub's <b><code>issue templates</code></b>, which are used to
+    automatically create an interface for users to communicate with the maintainers of a repository.
+</i>
+
+</div>
+</div>
+
+## Overview
+
+*GitHub issues* are a great way to communicate with the maintainers of a repository. Here, we provide three different templates, which names are self-explanatory:
+
+- [bug_report.md](bug_report.md): to report a bug
+- [feature_request.md](feature_request.md): to request a new feature
+- [vulnerability_report.md](feature_request.md): to report a vulnerability
+
+*GitHub* expects these templates to be written in *Markdown* or *Html* and stored in the
+[`.github/ISSUE_TEMPLATE`](/.github/ISSUE_TEMPLATE) folder, at the root of the concerned
+repository. *GitHub* automatically updates its interface according to the templates it finds. Then,
+when a user starts a new issue, it automatically generates a form using the content of the template
+selected by the user. Note that [GitHub Action](https://docs.github.com/en/actions) can be used to
+automatically label, close, or respond to issues
+(more on this in Section [GitHub Actions](#github-actions), below).

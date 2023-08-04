@@ -1,0 +1,14 @@
+# Next Deployment's Sources
+
+<div style="margin: 0 auto 5ex auto; max-width: 550px">
+
+!!!Abstract
+    <h4 style='margin:12pt 0 5pt 0; text-align:center;'>Abstract</h4>
+    <i>This folder hosts the <b><code>sources</code></b> that need to be deployed. It
+    typically contains a copy of the latest version of the project (or of some of its subprojects)  and
+    should be cleaned out at the end of the deployment procedure. Note that when deploying to a
+    given environment, the sources are first brought from here to the target's own `.sources` folder
+    before being deployed. That intermediary process also allows for the sources format to be
+    adapted to the target environment's requirements, if needed..<br/>&nbsp;</i>
+
+</div>

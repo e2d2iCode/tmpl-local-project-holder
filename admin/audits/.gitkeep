@@ -1,0 +1,14 @@
+# Audits & Reports
+
+<div style="min-width: 45em; font-size: normal; margin: 0 10% 5ex 5%;">
+<div style="font-size: 95%; text-align: justify;">
+
+!!!Abstract
+    *This folder hosts the project's **`audits`**, which consist of both the scripts needed to perform
+    them and the reports they produce. In the case when the projects consists of multiple subprojects,
+    this folder's internal structure is likely to be partionned in a way that reflects the relationships
+    between those subprojects. This folder's content may also have content that it shares with the
+    [/resources/useful-tools/](/resources/useful-tools/.gitkeep) folder.*
+
+</div>
+</div>
